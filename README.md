@@ -3,3 +3,6 @@ This is a repository used to learn and train a Generatively Pretrained Transform
 
 ## Requirements
 This uses a conda environment.
+
+## Start
+Start by going through `building-gpt.ipynb`.
