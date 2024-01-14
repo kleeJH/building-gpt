@@ -105,7 +105,7 @@ m = model.to(device)
 # Create optimizer
 optimizer = torch.optim.AdamW(model.parameters(), lr=learning_rate)
 
-for iter in range(10):
+for iter in range(epoch):
     # Every once in a while evaluate the loss on train and val sets
     if iter % eval_interval == 0:
         losses = estimate_loss()
