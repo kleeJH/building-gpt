@@ -1,0 +1,5 @@
+pywget==3.2
+--extra-index-url https://download.pytorch.org/whl/cu116
+torch
+torchvision
+torchaudio
