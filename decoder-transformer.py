@@ -5,12 +5,24 @@ import torch.nn as nn
 from torch.nn import functional as F
 
 ###################################################################################
+"""
+Training it longer will improve performance, but requires good hardware
+Don't train this using a CPU, use a decent GPU or rent an A100.
+
+- change batch_size to around 64
+- change block_size to around 256
+- learning_rate to 3e-4
+- n_embed to 128
+- n_heads stays the same because 128/4 = 32
+- n_layer to 5 to repeat transformer blocks
+- dropout to 0.2 to reduce overfitting
+"""
 # Hyper Params
 batch_size = 32 # How many independent sequences will we process in parallel?
 block_size = 8 # Input chunk size
 epoch = 5000
 eval_interval = 300
-learning_rate = 1e-3
+learning_rate = 1e-3 # reduce lr if training large size
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 eval_iters = 200
 n_embed = 32
